@@ -59,7 +59,6 @@ docker compose up -d
 
 cd /opt/sanchain/readonly
 ```
-```
 git pull
 ```
 ```
