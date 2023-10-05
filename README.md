@@ -57,6 +57,7 @@ docker compose up -d
 
 ### Santiment güncelleme:
 
+```
 cd /opt/sanchain/readonly
 ```
 git pull
