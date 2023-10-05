@@ -55,4 +55,16 @@ docker compose up -d
 > Sorun yaşarsanız VPN olabilir ama yinede önermem mobil veri vs. daha mantıklı.
 
 
+### Santiment güncelleme:
+
+cd /opt/sanchain/readonly
+```
+git pull
+```
+sudo ./scripts/stop_clear.sh
+```
+sudo ./scripts/gen_home_dir_geth.sh
+```
+sudo docker compose up -d
+
 
