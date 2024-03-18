@@ -1,0 +1,31 @@
+Here’s a step-by-step guide:
+
+Navigate to the Directory:
+cd /opt/sanchain/readonly
+
+This takes you to the directory where the node's data is stored.
+
+Update Your Local Repository:
+git pull
+
+Ensuring you have the latest updates.
+
+Stop the Node:
+docker compose stop
+
+It’s important to halt the node's operations before making changes to avoid any data corruption or loss.
+
+Run the Cleanup Operation:
+docker compose -f docker-compose-clean-geth.yml up -d
+
+This command initiates a cleanup process for Geth, the Ethereum node software. It may take a couple of hours, but it's designed to prune unnecessary data safely.
+
+Check the Cleanup Process:
+docker logs sanchain_dev-geth_prune-1
+
+After the cleanup process is complete, check the logs. If you see a line stating "State pruning successful" towards the end, you know the process has finished correctly.
+
+Restart Your Node:
+docker compose start
+
+Finally, restart your node to resume its operations with a lighter load.
