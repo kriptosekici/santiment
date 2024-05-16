@@ -62,12 +62,9 @@ cd /opt/sanchain/readonly
 ```
 git pull
 ```
-```
 sudo ./scripts/stop_clear.sh
 ```
-```
 sudo ./scripts/gen_home_dir_geth.sh
-```
 ```
 sudo docker compose up -d
 
